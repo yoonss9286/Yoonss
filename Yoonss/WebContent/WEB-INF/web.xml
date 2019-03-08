@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Yoonss</display-name>
+  <!-- 최초페이지에서 HOME을 눌렀을때 연결 -->
+	<context-param>
+		<param-name>JNDI_ROOT</param-name>
+		<param-value>java:comp/env</param-value>
+	</context-param>
+  
+  <servlet>
+  	<servlet-name>Index.yss</servlet-name>
+  	<servlet-class>controller.Index</servlet-class>
+  </servlet>
+  <servlet-mapping>  
+  	<servlet-name>Index.yss</servlet-name>
+  	<url-pattern>/DataRoom/Index.yss</url-pattern>
+  </servlet-mapping>
+  <!-- 회원가입 페이지로 이동 -->
+  <servlet>
+  	<servlet-name>Member.yss</servlet-name>
+  	<servlet-class>controller.Member</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Member.yss</servlet-name>
+  	<url-pattern>/DataRoom/Member.yss</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
